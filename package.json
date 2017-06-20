@@ -1,0 +1,32 @@
+{
+  "name": "react-redux-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "chart.js": "^2.6.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "enzyme": "^2.8.2",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react-addons-test-utils": "^15.6.0",
+    "react-scripts": "1.0.7",
+    "react-test-renderer": "^15.6.1",
+    "sinon": "^2.3.5"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/styles/ -o src/styles/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/styles/ -o src/styles/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
